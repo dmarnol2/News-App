@@ -1,0 +1,19 @@
+title=appname
+div
+    div
+    h3
+        I #{appname}
+        br
+        strong #{catchphrase}
+    div
+        p
+            | Welcome, #{username} 
+            - if(username === "Guest")
+                form(action = "/login" method="POST")
+                    input(type="submit" value="Login")
+            - else
+                | (#{role})
+                form(action = "/" method="POST")
+                    input(type="submit" name="login_status" value="Logout")
+            - if (role == "Reporter" && page!="add")
+                button(onclick="location.href='/add'") Create New Article

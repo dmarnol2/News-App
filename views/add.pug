@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    include header.pug
+  body(BGCOLOR="#999999")
+    div
+        h2 #{author}
+    div
+        form(action = "/add" method="POST")
+            p Title: 
+                input(type="text" name="title")
+            p Content:
+            textarea(cols="100" rows="10" name="content")
+            br
+            p Public?
+                input(
+                    type="radio" 
+                    name="public" 
+                    value="T" 
+                    checked) 
+                | True
+                input(
+                    type="radio" 
+                    name="public" 
+                    value="F")
+                | False
+            br
+            input(type="submit" name="add" value="Add")

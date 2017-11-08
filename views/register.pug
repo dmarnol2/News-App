@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    title=appname
+    h3
+        I #{appname}
+        br
+        strong #{catchphrase}
+  body(BGCOLOR="#999999")
+  div
+    form(action="/" method="POST")
+        h3 Account Info
+        br
+        div 
+            p Name: #{tempusername}
+            input(type="hidden"
+                name="name"
+                value=tempusername)
+        div
+            p Account Type:
+            input(
+                type="radio" 
+                name="role" 
+                value="Subscriber" 
+                checked) 
+            | Subscriber
+            br
+            input(
+                type="radio" 
+                name="role" 
+                value="Reporter")
+            | Reporter
+            br
+        input(type="submit" name="login_status" value="Register")

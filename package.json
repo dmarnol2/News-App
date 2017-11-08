@@ -1,0 +1,27 @@
+{
+  "name": "ser421collaboration",
+  "version": "1.0.0",
+  "description": "Lab3Activity2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchoadley/SER421Collaboration.git"
+  },
+  "author": "Kristofer Hoadley, David Arnold",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/kchoadley/SER421Collaboration/issues"
+  },
+  "homepage": "https://github.com/kchoadley/SER421Collaboration#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "pug": "^2.0.0-rc.4",
+    "xml2js": "^0.4.19"
+  }
+}

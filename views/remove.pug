@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    include header.pug
+  body(BGCOLOR="#999999")
+    div
+        h2 #{title}
+        p #{author}
+        p #{content}
+    div
+        form(action = "/remove" method="POST")
+            input(type="hidden" name="author" value=author)
+            input(type="hidden" name="title" value=title)
+            input(type="hidden" name="confirm" value="true")
+            input(type="submit" value="Delete")

@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title=appname
+    h3
+      I #{appname}
+      br
+      strong #{catchphrase}
+  body(BGCOLOR="#999999")
+  div
+    form(action="/" method="POST")
+      h3 Account Info
+      br
+      div.form_group 
+        label(for="name") Name:
+        input(
+          type="text"
+          name="name"
+          min="2"
+          max="16"
+          required="true"
+          pattern="^(?!Guest$).*$")
+      input(type="submit" name="login_status" value="Login")

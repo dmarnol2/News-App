@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Bob",
+      "role": "Subscriber"
+    },
+    {
+      "name": "Sylvia",
+      "role": "Subscriber"
+    },
+    {
+      "name": "Larry",
+      "role": "Subscriber"
+    },
+    {
+      "name": "Igor",
+      "role": "Reporter"
+    },
+    {
+      "name": "Brandon",
+      "role": "Reporter"
+    },
+    {
+      "name": "David",
+      "role": "Reporter"
+    }
+  ]
+}

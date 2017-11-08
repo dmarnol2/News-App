@@ -1,0 +1,11 @@
+-for (var i = 0; i < news.NEWS.ARTICLE.length; i++)
+    -if(locals.role == "Subscriber" || news.NEWS.ARTICLE[i].PUBLIC == "T" || (locals.role == "Reporter" && news.NEWS.ARTICLE[i].AUTHOR == locals.username))
+        h4 <a href="/view/?author=#{news.NEWS.ARTICLE[i].AUTHOR}&title=#{news.NEWS.ARTICLE[i].TITLE}"> #{news.NEWS.ARTICLE[i].TITLE}</a>
+            -if (locals.role == "Reporter" && news.NEWS.ARTICLE[i].AUTHOR == locals.username)
+                form(action = "/remove" method="POST")
+                    input(type="hidden" name="author" value=news.NEWS.ARTICLE[i].AUTHOR[0])
+                    input(type="hidden" name="title" value=news.NEWS.ARTICLE[i].TITLE[0])
+                    input(type="hidden" name="confirm" value="false")
+                    input(type="submit" value="Delete")
+    -else
+        h4 #{news.NEWS.ARTICLE[i].TITLE}
